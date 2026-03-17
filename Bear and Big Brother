@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+
+    int a;
+    cin>>a;
+    int b;
+    cin>>b;
+    int count=0;
+    while(a <= b){
+        a =3*a;
+        b =2*b;
+        count++;
+    }
+    cout<<count;
+    }
+    
+
