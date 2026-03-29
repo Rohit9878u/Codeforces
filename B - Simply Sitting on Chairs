@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        vector<int>p(n+1);
+        for(int i=1;i<=n;i++) cin>>p[i];
+        int safe_total=0,best=-1;
+        for(int i=1;i<=n;i++){
+            if(p[i]<=i) safe_total++;
+            else best=max(best,p[i]);
+        }
+        if(best==-1){
+            cout<<safe_total<<"\n";
+        } else {
+            int lost=(p[best]<=best)?1:0;
+            cout<<safe_total-lost+1<<"\n";
+        }
+    }
+}
